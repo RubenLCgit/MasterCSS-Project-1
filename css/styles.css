@@ -11,15 +11,119 @@
     font-style: normal;
 }
 
+@font-face{
+    font-family: fajala;
+    src: url("../fonts/FjallaOne-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: icons;
+    src: url("../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format('svg'),
+         url("../fonts/websymbols-regular-webfont.eot"),
+         url("../fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/websymbols-regular-webfont.woff") format("woff"),
+         url("../fonts/websymbols-regular-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*ESTILOS GENERALES*/
 
-*{
-    padding: 0px;
+* {
     margin: 0px;
+    padding: 0px;
 }
 
 body{
     background-image: url(../img/paven.png);
+}
+
+a{
+    color: #529125;
+    text-decoration: none;
+}
+
+a:visited{/*EFETOS PARA ENLACES YA VISITADOS*/
+    color: #529125;
+}
+
+a:hover{
+    color: #285616;
+}
+
+.red{
+  color: #9b324b;
+}
+
+.blue{
+  color: #0c73f2;
+}
+
+.orange{
+    color: #d69d2a;
+}
+
+.icon{
+    font-family: icons;
+    float: left;
+    margin-right: 5px;
+    margin-top: -1px;
+}
+
+/* FORMULARIOS */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select{
+    border: 1px solid #C9C9C9;
+    box-shadow: 0px 0px 2px #CCC inset;
+    background: white;
+    padding: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: gray;
+    transition: all 300ms;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus{
+    outline: none; /*Eliminar borde negro automático al hacer focus en los imput*/
+    border: 1px solid #70b231;
+    color: black;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button{
+    display: block;
+    border-radius: 2px;
+    border: 1px solid green;
+    width: 60px;
+    padding: 3px;
+    background-color: #70b231;
+    cursor: pointer;
+    color: white;
+}
+
+input[type="button"]:hover,/*EFECTOS AL PASAR RATON POR ENCIMA*/
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover{
+   box-shadow: 0px 0px 2px grey;
+}
+
+input[type="button"]:active,/*EFECTOS CUANDO SE HAGA CLIC*/
+input[type="submit"]:active,
+input[type="reset"]:active,
+button:active{
+   box-shadow: 0px 0px 3px grey inset;
+   text-shadow: 0px 0px 1px #CCC;
 }
 
 /*CABECERA*/
@@ -136,4 +240,144 @@ header a{
 
 #nav ul li:hover ul li:hover{
     box-shadow: 0px 0px 6px #CCC inset ;
+}
+
+/* CONTENIDO */
+
+#content {
+    width: 1250px;
+    min-width: 1100px;
+    margin: 0px auto;
+}
+
+/*BARRA LATERAL*/
+
+#aside, #frase{
+    width: 200px;
+    float: left;
+    margin: 30px;
+    background-color: white;
+    border: 1px solid #CCC;
+    box-shadow: 0px 2px 2px #CCC;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+#frase{
+    padding: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+    width: 180px;/*Al añadir padding de 10px a cada lado hay que ajustar el width*/
+}
+
+#aside .widget {
+    display: block;
+    width: 180px;
+    margin: 5px auto;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    border-bottom: 1px dashed #333333;
+}
+
+#aside .widget:last-child{
+    margin-bottom: 20px;
+}
+
+#aside h3{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    background-color: #f2f3f2;
+    border: 1px solid #CCC;
+    border-left: none;
+    border-right: none;
+}
+
+#aside li{
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    list-style: square;/*MODIFICAR VIÑETAS DE LOS ELEMENTOS LI (CON SQUARE PONDRÁ CUADRADOS)*/
+}
+
+/* FORMULARIOS BARRA LATERAL */
+
+#aside div label,
+#aside div input[type="text"],
+#aside div input[type="email"],
+#aside div input[type="password"],
+#aside div a{
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#aside div input[type="button"],
+#aside div input[type="submit"],
+#aside div button{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#aside input,
+#aside label{
+    margin: 0px auto;
+    text-align: center;
+}
+
+/* SECCIONES */
+
+#sections{
+    width: 75%;
+    float: right;
+    font-family: sans-serif, Arial, Helvetica;
+    margin-right: 20px;
+}
+
+#sections .titulo{
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: -20px;
+    padding-bottom: 10px;
+    font-family: fajala;
+    border-bottom: 1px solid #CCC;/*Añadir una linea de dseparación con CSS permite modificar sus estilos al contrario que si utilizamos el elemento HTML <hr>*/
+}
+
+#sections section{
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #CCC;
+    box-shadow: 0px 0px 4px #C9C9C9;
+    color: #333333;
+    overflow: hidden;
+}
+
+#sections .article{
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#sections .date{
+    color: gray;
+    font-size: 14px;
+}
+
+#sections .stickerOne,
+#sections .stickerTwo{
+    position: absolute;
+    margin-top: -38px;
+    z-index: 0;
+}
+
+#sections .stickerTwo{
+    margin-left: 860px;
 }

@@ -1,0 +1,288 @@
+/*FONTS*/
+
+@font-face{
+    font-family: Nevis;
+    src: url(../fonts/nevis.ttf);
+}
+
+@font-face{
+    font-family: icons;
+    src: url("../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format('svg'),
+         url("../fonts/websymbols-regular-webfont.eot"),
+         url("../fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/websymbols-regular-webfont.woff") format("woff"),
+         url("../fonts/websymbols-regular-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*GENERAL STYLES*/
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../img/paven.png);
+}
+
+a {
+    color: #70b231;
+    text-decoration: none;
+}
+
+.gray{
+    color: #333333;
+}
+
+.red{
+    color: #9b2428;
+}
+
+.orange{
+    color: #d69d2a;
+}
+
+.icon{
+    font-family: icons;
+    float: left;
+    margin-top: -1px;
+}
+
+/*HEADER*/
+
+#header{
+    text-align: center;
+    min-height: 220px;
+}
+
+#logotipo img{
+    width: 140px;
+    margin-top: 1%;
+}
+
+#header h1 a{
+    text-decoration: none;
+    color: #70b231;
+    text-transform: uppercase;
+    font-size:2.5rem;
+    letter-spacing: 5px;
+    text-shadow: 1px 1.5px 2px black;
+    font-family: Nevis;
+}
+
+/*NAVBAR*/
+
+#navbar{
+    background-color: #333333;
+    height: 41px;
+    line-height: 40px;
+    width: 100%;
+    font-family: sans-serif, Helvetica, Arial;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px grey;
+}
+
+#navbar ul{
+    list-style: none;/*Quita los estilos a las listas*/
+    width: 1130px;/*Especificamos un tamaño para la caja ul inferior al del pladre para poder centrar la caja ul con respecto a la del padre con lo siguiente:*/
+    margin: 0px auto;
+}
+
+#navbar > ul > li{/*Añadimos el combinador de hijo directo porque al haber mas elementos 'ul li' dentro de navbar como nietos, no queremos que se les aplique estos estilos ya que float, como efecto secundario, hace que las cajas se adapten a su contenido*/
+    float: left;
+    border-right: 1px solid gray;
+    transition: all 300ms;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    margin: 0px 20px;
+    display: block; /*Para que el enlace coja todo el contenido de la caja li donde está contenido*/
+}
+
+
+#navbar > ul > li{
+    border-left: 1px solid gray;
+}
+
+#navbar > ul > li:hover{
+    background-color: #70b231;
+    box-shadow: 0px 0px 4px green inset;
+}
+
+/*DROP-DOWN MENU*/
+
+#navbar ul li ul {
+    display: none;
+    position: absolute;
+    width: 160px;
+    box-shadow: 0px 2px 2px grey;
+    z-index: 1;
+}
+
+#navbar ul li:hover ul{
+    display: block;
+}
+
+#navbar ul li:hover ul li{
+    background-color: #F2F1F0;
+    border-bottom: 1px solid #D6D6D6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: all 300ms;
+}
+
+#navbar ul li:hover ul li a{
+    color: #666;
+}
+
+#navbar ul li:hover ul li:hover{
+    box-shadow: 0px 0px 6px #CCC inset ;
+}
+
+/*MAIN CONTENT*/
+
+#content{
+    width: 1250px;
+    min-width: 1100px;
+}
+
+#sideBar{
+    float: left;
+    width: 15%;
+    margin: 30px 0px 60px 100px;
+    font-family: sans-serif;
+}
+
+#sideBar .menu{
+    margin-bottom: 20px;
+    border: solid 1px #ccc;
+    box-shadow: 1px 1px 5px grey;
+    background-color: white;
+}
+
+.sectionside{
+    border-bottom: 1px dashed #333333;
+}
+
+.sectionside:last-child{
+    margin-bottom: 20px;
+}
+
+.login{
+    text-align: center;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.login>h3{
+    margin-top: 5%;
+    background-color: #f8f8f8;
+    max-width: 85%;
+    margin: 10px auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+input[type=text],
+input[type=password]{
+    min-height: 25px;
+    min-width: 85%;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.button{
+    background-color: #70b231;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    color: white;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+.links1{
+    margin-bottom: 20px;
+}
+
+.login:nth-child(2) h3{
+    color: blue;
+}
+
+.login:nth-child(3) h3{
+    color: brown;
+}
+
+.links1 a{
+    display: block;
+    text-align: left;
+    margin: 5px 15px;
+    text-decoration: none;
+    color: #70b231;
+}
+
+div:last-child .links1 li{
+    margin-left: 30px;
+}
+
+div:last-child .links1 a{
+    margin: 10px 0px;
+}
+
+.comment{
+    border: solid 1px #ccc;
+    box-shadow: 1px 1px 5px grey;
+    background-color: white;
+    min-height: 100px;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.comment a{
+    text-decoration: none;
+    color: #70b231;
+}
+
+section{
+    width: 60%;
+    min-height: 2200px;
+    float: left;
+    margin: 0px 0px 120px 40px;
+}
+
+.document{
+    border: 1px solid #c9c9c9;
+    box-shadow: -0px 1px 5px black, 0px 0px 5px gray;
+    background-color: white;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.document h2{
+    text-align: center;
+    padding: 10px;
+    margin-top: -20px;
+}
+
+.document p, span{
+    padding: 10px;
+}
+
+.document .stickerOne,
+.document .stickerTwo{
+    position: absolute;/*Un elemento con position: absolute se posiciona de manera relativa al primer ancestro
+     que tenga un position distinto de static. Si no hay ninguno, se posiciona relativo al <html>. Este elemento
+      es retirado del flujo normal del documento, lo que significa que puede solapar a otros elementos y lo podremos
+       mover como queramos sin que afecte al resto de elementos*/
+    margin-top: -30px;/*Al colocar un margin-top negativo, el elemento se movera hacia arriba*/
+    z-index: 0;
+}
+
+.document .stickerTwo{
+    margin-left: 675px;
+}
