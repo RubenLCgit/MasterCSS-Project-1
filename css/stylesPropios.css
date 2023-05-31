@@ -146,15 +146,10 @@ a {
 
 /*MAIN CONTENT*/
 
-#content{
-    width: 1250px;
-    min-width: 1100px;
-}
-
 #sideBar{
+    width: 200px;
     float: left;
-    width: 15%;
-    margin: 30px 0px 60px 100px;
+    margin: 30px 0px 60px 650px;
     font-family: sans-serif;
 }
 
@@ -249,9 +244,9 @@ div:last-child .links1 a{
 }
 
 section{
-    width: 60%;
+    width: 900px;
     float: left;
-    margin: 0px 0px 120px 40px;
+    margin: 0px 0px 120px 60px;
 }
 
 .document{
@@ -283,7 +278,7 @@ section{
 }
 
 .document .stickerTwo{
-    margin-left: 675px;
+    margin-left: 825px;
 }
 
 /*FOOTER*/
